@@ -2,14 +2,18 @@
 <html lang="zxx">
 
 <head>
-  <title>tweegenous</title>
+  <title>Tweegenous</title>
   <!-- Meta tag Keywords -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="keywords"
     content="Utilizer Login Form template Responsive, Login form web template, Flat Pricing tables, Flat Drop downs Sign up Web Templates, Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-
+  <script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="main.js"></script>
   <script>
     addEventListener("load", function () {
       setTimeout(hideURLbar, 0);
@@ -48,31 +52,38 @@
           <div class="content-w3layouts-main">
 
             <div class="form-w3ls-left-info">
-              <form action="#" method="post">
-                <input type="email" placeholder="Search" required="" />
-                <select class="select-box">
+              <form onsubmit="return myfunc()">
+                <input type="text" placeholder="Search" id="search" required="" />
+                <select class="select-box" id="language">
                   <option value="nepali">Nepali</option>
                   <option value="maithili">Maithili</option>
                   <option value="hindi">Hindi</option>
-                  <option value="english">English</option>
+                  <option value="bengali">Bengali</option>
                 </select>
 
                 <div class="bottom">
                   <button class="btn" type="reset">Reset</button>
-                  <button class="btn reg" type="submit">Submit</button>
+                  <button class="btn reg" id="btn" type="submit">Submit</button>
                   <!-- <button class="btn reg" type="reset">Reset</button> -->
                 </div>
-
               </form>
             </div>
-
           </div>
         </div>
       </div>
     </div>
   </div>
   <!-- //main -->
-
+  <script>
+    function myfunc(e) {            
+      // e.preventDefault();
+      let username = document.getElementById('search').value;
+      let email = document.getElementById('language');
+      // console.log(username);
+      window.location.href="result.html";
+      return false;
+    }
+  </script>
 </body>
 
 </html>
