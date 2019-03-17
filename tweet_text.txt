@@ -1,0 +1,17 @@
+To use this script you can pass the following attributes:
+    username: Username of a specific twitter account (without @)
+ querysearch: A query text to be matched
+   maxtweets: The maximum number of tweets to retrieve
+   toptweets: Only the tweets provided as top tweets by Twitter (no parameters required)
+      output: A filename to export the results (default is "output_got.csv")
+
+Examples:
+# Example 1 - Get tweets by username [barackobama]
+python Exporter.py --username "modi" --maxtweets 1
+
+# Example 2 - Get tweets by query search [europe refugees]
+python Exporter.py --querysearch "india" --maxtweets 1
+
+
+# Example 3 - Get the last 10 top tweets by username
+python Exporter.py --username "barackobama" --maxtweets 10 --toptweets
